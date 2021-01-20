@@ -53,7 +53,6 @@ if (
       audio.setAttribute('controls', '')
 
       deleteButton.innerHTML = 'Delete'
-      clipLabel.innerHTML = clipName
 
       clipContainer.appendChild(audio)
       clipContainer.appendChild(clipLabel)
@@ -72,8 +71,8 @@ if (
       const downloadAnchor = document.createElement('a')
 
       downloadAnchor.href = audioURL
-      console.log(audioURL)
-      downloadAnchor.setAttribute('download', 'download')
+      downloadAnchor.innerHTML = clipName
+      downloadAnchor.setAttribute('download', `${clipName}.mp3`)
       downloadAnchor.setAttribute('target', `_blank`)
 
       clipContainer.appendChild(downloadAnchor)
